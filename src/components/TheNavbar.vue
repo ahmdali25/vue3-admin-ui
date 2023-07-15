@@ -45,7 +45,7 @@ const logout = mdiLogout;
 <style scoped>
 #navbar {
     margin: 0;
-    height: 80px;
+    height: 60px;
 }
 .account-circle {
     width: 40px !important;
