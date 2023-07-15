@@ -6,14 +6,12 @@ import { RouterView } from 'vue-router';
 
 <template>
   <TheNavbar/>
-  <section>
-    <TheSidebar/>
-    <RouterView/>
-  </section>
+  <TheSidebar/>
+  <RouterView/>
 </template>
 
-<style>
-main {
+<style scoped>
+.main {
   background-color: #F8F8F8;
   padding: 90px 1em 2em 260px;
 }
