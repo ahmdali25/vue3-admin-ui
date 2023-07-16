@@ -53,13 +53,13 @@ onMounted(() => {
         </router-link>
       </li>
       <li>
-        <router-link to="/forms">
+        <router-link to="/profile">
           <span><svg-icon type="mdi" :path="profile" class="icon"></svg-icon></span>
           <span class="menu-text"> Profile</span>
         </router-link>
       </li>
       <li>
-        <router-link to="/forms">
+        <router-link to="/login">
           <span><svg-icon type="mdi" :path="lock" class="icon"></svg-icon></span>
           <span class="menu-text"> Login</span>
         </router-link>
