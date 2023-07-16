@@ -23,7 +23,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <aside class="aside">
+  <aside class="aside" v-if="$route.fullPath !== '/login'">
     <a v-if="isMobileView" class="navbar-item" href="https://bulma.io">
       <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
     </a>

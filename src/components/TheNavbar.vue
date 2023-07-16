@@ -9,7 +9,7 @@ const logout = mdiLogout;
 
 
 <template>
-    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation" id="navbar">
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation" id="navbar" v-if="$route.fullPath !== '/login'">
         <div class="navbar-brand">
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
@@ -32,10 +32,10 @@ const logout = mdiLogout;
                             &nbsp; Profile
                         </router-link>
                         <hr class="navbar-divider">
-                        <a class="navbar-item">
+                        <router-link to="/login" class="navbar-item">
                             <svg-icon type="mdi" :path="logout"></svg-icon>
                             &nbsp; Logout
-                        </a>
+                        </router-link>
                     </div>
                 </div>
             </div>

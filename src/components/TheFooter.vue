@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer class="footer" v-if="$route.fullPath !== '/login'">
     <div class="container">
       <p>
         <strong>&copy; 2023 Admin UI</strong> by <a href="https://github.com/ahmdali25" target="_blank">Ahmad Ali Azhary</a>.
