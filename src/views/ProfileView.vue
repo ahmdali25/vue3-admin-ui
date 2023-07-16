@@ -81,10 +81,16 @@ const user = ref({
 									</div>
 								</div>
 							</div>
-							<div class="card-footer mt-5">
-								<div class="card-footer-items">
-									<button type="submit" class="button is-info">Submit</button>
-									<button type="reset" class="button is-info is-light">Reset</button>
+							
+							<hr class="divider">
+
+							<div class="field is-horizontal mt-4 pb-5">
+								<div class="field-label is-normal"></div>
+								<div class="field-body">
+									<div class="field">
+										<button type="submit" class="button is-info mr-4">Submit</button>
+										<button type="reset" class="button is-info is-light">Reset</button>
+									</div>
 								</div>
 							</div>
 						</form>
@@ -200,12 +206,6 @@ const user = ref({
 </template>
 
 <style scoped>
-.card-footer-items {
-	display: flex;
-	gap: 10px;
-	padding: 1.5rem 5rem;
-}
-
 .field-profile {
 	display: flex;
 	justify-content: center;
@@ -218,5 +218,10 @@ const user = ref({
 .icon-profile {
 	width: 7rem;
 	height: 7rem;
+}
+
+.divider {
+	margin-left: -1.5rem;
+	margin-right: -1.5rem;
 }
 </style>
