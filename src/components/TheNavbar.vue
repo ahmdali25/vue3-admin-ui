@@ -1,3 +1,13 @@
+<script setup lang="ts">
+import SvgIcon from '@jamescoyle/vue-icon';
+import { mdiAccountCircle, mdiAccount, mdiLogout } from '@mdi/js';
+
+const account = mdiAccount;
+const accountCircle = mdiAccountCircle;
+const logout = mdiLogout;
+</script>
+
+
 <template>
     <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation" id="navbar">
         <div class="navbar-brand">
@@ -32,15 +42,6 @@
         </div>
     </nav>
 </template>
-
-<script setup lang="ts">
-import SvgIcon from '@jamescoyle/vue-icon';
-import { mdiAccountCircle, mdiAccount, mdiLogout } from '@mdi/js';
-
-const account = mdiAccount;
-const accountCircle = mdiAccountCircle;
-const logout = mdiLogout;
-</script>
 
 <style scoped>
 #navbar {

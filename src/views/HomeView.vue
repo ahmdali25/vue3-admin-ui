@@ -5,6 +5,7 @@ ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 import SvgIcon from '@jamescoyle/vue-icon';
 import { mdiAccountGroup, mdiCartOutline, mdiChartLine } from '@mdi/js';
 import BaseBreadcrumb from '@/components/BaseBreadcrumb.vue';
+import BaseHeroTitle from '@/components/BaseHeroTitle.vue';
 import BaseCard from '@/components/BaseCard.vue';
 import BaseTable from '@/components/BaseTable.vue'
 import { ref } from "vue";
@@ -46,8 +47,8 @@ const chartOptions = ref({
 <template>
   <div class="main">
     <BaseBreadcrumb level="Dashboard"/>
-    <h1 class="title">Dashboard</h1>
-    <div class="columns">
+    <BaseHeroTitle title="Dashboard"/>
+    <section class="columns mt-4">
       <div class="column">
         <BaseCard name="Clients" value="400" :icon="iconAccount" icon-color="has-text-primary"/>
       </div>
@@ -57,15 +58,15 @@ const chartOptions = ref({
       <div class="column">
         <BaseCard name="Performance" value="210%" :icon="iconChartLine" icon-color="has-text-primary"/>
       </div>
-    </div>
-    <div>
+    </section>
+    <section>
       <Bar
         id="my-chart-id"
         :options="chartOptions"
         :data="chartData"
       />
-    </div>
-    <div class="card mt-5">
+    </section>
+    <section class="card mt-5">
       <header class="card-header">
         <p class="card-header-title">
           Clients Data
@@ -74,6 +75,6 @@ const chartOptions = ref({
       <div class="card-content">
         <BaseTable />
       </div>
-    </div>
+    </section>
   </div>
 </template>

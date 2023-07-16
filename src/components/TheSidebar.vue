@@ -1,3 +1,27 @@
+<script setup lang="ts">
+import { ref, onMounted } from 'vue';
+import type { Ref } from 'vue'
+import SvgIcon from '@jamescoyle/vue-icon';
+import { mdiViewDashboard, mdiTable, mdiTextBoxEdit, mdiAccountCircle, mdiLock } from '@mdi/js';
+
+const dashboard = mdiViewDashboard;
+const tables = mdiTable;
+const forms = mdiTextBoxEdit;
+const profile = mdiAccountCircle;
+const lock = mdiLock;
+
+const isMobileView: Ref<boolean> = ref(false);
+
+function onResize() {
+  isMobileView.value = window.innerWidth < 600;
+}
+
+onMounted(() => {
+  onResize();
+  window.addEventListener('resize', onResize, { passive: true })
+})
+</script>
+
 <template>
   <aside class="aside">
     <a v-if="isMobileView" class="navbar-item" href="https://bulma.io">
@@ -43,30 +67,6 @@
     </ul>
   </aside>
 </template>
-
-<script setup lang="ts">
-import { ref, onMounted } from 'vue';
-import type { Ref } from 'vue'
-import SvgIcon from '@jamescoyle/vue-icon';
-import { mdiViewDashboard, mdiTable, mdiTextBoxEdit, mdiAccountCircle, mdiLock } from '@mdi/js';
-
-const dashboard = mdiViewDashboard;
-const tables = mdiTable;
-const forms = mdiTextBoxEdit;
-const profile = mdiAccountCircle;
-const lock = mdiLock;
-
-const isMobileView: Ref<boolean> = ref(false);
-
-function onResize() {
-  isMobileView.value = window.innerWidth < 600;
-}
-
-onMounted(() => {
-  onResize();
-  window.addEventListener('resize', onResize, { passive: true })
-})
-</script>
 
 <style scoped>
 @media screen and (max-width: 768px) {
