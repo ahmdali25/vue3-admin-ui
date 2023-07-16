@@ -27,10 +27,10 @@ const logout = mdiLogout;
                     </a>
 
                     <div class="navbar-dropdown">
-                        <a class="navbar-item">
+                        <router-link to="/profile" class="navbar-item">
                             <svg-icon type="mdi" :path="account"></svg-icon>
                             &nbsp; Profile
-                        </a>
+                        </router-link>
                         <hr class="navbar-divider">
                         <a class="navbar-item">
                             <svg-icon type="mdi" :path="logout"></svg-icon>
